@@ -1,8 +1,11 @@
 import { Box } from "@mui/material";
 import Comment from "./comment";
-import { Paper } from "@mui/material";
 
-export default function Comments({ comments }) {
+interface Props {
+  comments: [object];
+}
+
+export default function Comments({ comments }: Props) {
   if (!comments) return (
     <><p>Loading...</p></>
   );
