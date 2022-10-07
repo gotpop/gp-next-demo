@@ -6,8 +6,6 @@ const lightTheme = createTheme({
     borderRadius: 16,
   },
   typography: {
-    // In Chinese and Japanese the characters are usually larger,
-    // so a smaller fontsize may be appropriate.
     fontSize: 12,
   },
   palette: {
