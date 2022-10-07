@@ -1,3 +1,8 @@
+# View live site
+
+https://www.gp-next-demo.vercel.app
+
+
 # frontend-coding
 
 Setup the project:
