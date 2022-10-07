@@ -1,11 +1,8 @@
 import { Box, Paper, Typography } from "@mui/material";
 import useSWR from "swr";
 import Comments from "./comments";
-
 import LoadingButton from "@mui/lab/LoadingButton";
-import SaveIcon from "@mui/icons-material/Save";
 import CommentIcon from "@mui/icons-material/Comment";
-import Stack from "@mui/material/Stack";
 import { useState } from "react";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
@@ -18,15 +15,13 @@ interface Posty {
   }
 }
 
-export default function PostSingle({ post }: Posty) {
+export default function PostSingle({ post }:Posty) {
   const [showComments, setShowComments] = useState(false);
   const triggerToggle = () => {
     setShowComments(!showComments);
   };
 
   const { data: comments, error } = useSWR(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`, fetcher);
-  
-  if (error) return "An error has occurred.";
 
   return (
     <Box

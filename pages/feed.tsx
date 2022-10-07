@@ -21,11 +21,11 @@ const Feed: NextPage<Props> = ({ posts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container maxWidth="md">
-        {/* <Box p={8}>
-          {posts.map((post: Posty, index) => (
+        <Box p={8}>
+          <>{posts.map((post: any, index: number) => (
             <PostSingle key={index} post={post} />
-          ))}
-        </Box> */}
+          ))}</>
+        </Box>
       </Container>
     </>
   );
