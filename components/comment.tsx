@@ -1,6 +1,14 @@
 import { Box } from "@mui/material";
 
-export default function Comment({ comment }) {
+interface Props {
+  comment: {
+    name: string;
+    email: string;
+    body: string;
+  };
+}
+
+export default function Comment({ comment }: Props) {
   return (
     <Box mb={4} p={2} sx={{background: '#f9f9f9', borderRadius: '16px'}}>
       <h3>{comment.name}</h3>
