@@ -1,7 +1,6 @@
 # View live site
 
-https://www.gp-next-demo.vercel.app
-
+https://gp-next-demo.vercel.app/
 
 # frontend-coding
 
