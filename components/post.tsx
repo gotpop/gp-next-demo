@@ -5,23 +5,21 @@ import LoadingButton from "@mui/lab/LoadingButton";
 import CommentIcon from "@mui/icons-material/Comment";
 import { useState } from "react";
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
-
-interface Posty {
+interface PostInterface {
   post: {
     id: string;
     title: string;
     body: string;
-  }
-}
-
-export default function PostSingle({ post }:Posty) {
-  const [showComments, setShowComments] = useState(false);
-  const triggerToggle = () => {
-    setShowComments(!showComments);
   };
+};
 
-  const { data: comments, error } = useSWR(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`, fetcher);
+export default function PostSingle({ post }: PostInterface) {
+  const [showComments, setShowComments] = useState(false);
+  const triggerToggle = () => setShowComments(!showComments);
+  const url = `https://jsonplaceholder.typicode.com/posts/${post.id}/comments`;
+  
+  const fetcher = (url: string) => fetch(url).then((res) => res.json());
+  const { data: comments, error } = useSWR(url, fetcher);
 
   return (
     <Box

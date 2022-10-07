@@ -22,9 +22,9 @@ const Feed: NextPage<Props> = ({ posts }) => {
       </Head>
       <Container maxWidth="md">
         <Box p={8}>
-          <>{posts.map((post: any, index: number) => (
+          {posts.map((post: any, index: number) => (
             <PostSingle key={index} post={post} />
-          ))}</>
+          ))}
         </Box>
       </Container>
     </>
