@@ -10,7 +10,7 @@ import { useState } from "react";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-interface Post {
+interface Posty {
   post: {
     id: string;
     title: string;
@@ -18,7 +18,7 @@ interface Post {
   }
 }
 
-export default function Post({ post }: Post) {
+export default function PostSingle({ post }: Posty) {
   const [showComments, setShowComments] = useState(false);
   const triggerToggle = () => {
     setShowComments(!showComments);

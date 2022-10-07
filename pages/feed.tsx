@@ -1,10 +1,16 @@
 import type { NextPage } from "next";
-import Post from "../components/post";
+import PostSingle from "../components/post";
 import { Box, Container } from "@mui/material";
 import Head from "next/head";
 
 interface Props {
-  posts: [object]
+  posts: [Posty]
+}
+
+interface Posty {
+  id: string;
+  title: string;
+  body: string;
 }
 
 const Feed: NextPage<Props> = ({ posts }) => {
@@ -15,11 +21,11 @@ const Feed: NextPage<Props> = ({ posts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container maxWidth="md">
-        <Box p={8}>
-          {posts.map((post, index) => (
-            <Post key={index} post={post} />
+        {/* <Box p={8}>
+          {posts.map((post: Posty, index) => (
+            <PostSingle key={index} post={post} />
           ))}
-        </Box>
+        </Box> */}
       </Container>
     </>
   );
