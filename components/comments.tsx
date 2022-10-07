@@ -2,7 +2,13 @@ import { Box } from "@mui/material";
 import Comment from "./comment";
 
 interface Props {
-  comments: [object];
+  comments: [Comment];
+}
+
+interface Comment {
+  name: string;
+  email: string;
+  body: string;
 }
 
 export default function Comments({ comments }: Props) {
@@ -12,7 +18,7 @@ export default function Comments({ comments }: Props) {
 
   return (
     <Box mt={4}>
-      {comments.map((comment, index) => (
+      {comments.map((comment: Comment, index) => (
         <Comment key={index} comment={comment} />
       ))}
     </Box>
