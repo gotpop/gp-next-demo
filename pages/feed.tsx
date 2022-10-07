@@ -4,10 +4,10 @@ import { Box, Container } from "@mui/material";
 import Head from "next/head";
 
 interface Props {
-  posts: [Posty]
+  posts: [PostInterface];
 }
 
-interface Posty {
+interface PostInterface {
   id: string;
   title: string;
   body: string;
