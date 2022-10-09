@@ -1,9 +1,9 @@
-import { Container, Box, Slide, Zoom } from "@mui/material";
-import type { NextPage } from "next";
 import { useState } from "react";
 import Head from "next/head";
-import Grid from "@mui/material/Grid";
 import Image from "next/image";
+import type { NextPage } from "next";
+import { Container, Box } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import Backdrop from "@mui/material/Backdrop";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
@@ -23,8 +23,11 @@ const style = {
 interface Loader {
   src: string;
   width: number;
-}
+};
 
+// TODO: combine into single loader
+// Due to time contraints and using JSONplaceholder I used 2 different loaders
+// Also using string.replace is a bit of a hack.. we wouln't need to do this with a proper api
 const myLoaderSmall = ({ src, width }: Loader) => {
   const imgId = src.replace("https://via.placeholder.com/150/", "");
   const image = `https://via.placeholder.com/${width}/${imgId}`;
@@ -41,13 +44,13 @@ const myLoaderLarge = ({ src, width }: Loader) => {
 
 interface Props {
   photos: [PhotoInterface];
-}
+};
 
 interface PhotoInterface {
   thumbnailUrl: string;
   title: string;
   url: string;
-}
+};
 
 const Vault: NextPage<Props> = ({ photos }) => {
   const [open, setOpen] = useState(false);
@@ -99,6 +102,8 @@ const Vault: NextPage<Props> = ({ photos }) => {
         </Box>
         <Grid container>
           {photos.slice(0, 30).map((photo: PhotoInterface, index: number) => (
+            // Whilst this is responsive it only uses 2 image sizes, which works well enough for the purposes of this demo
+            // But would be more sophisticated in a polished product
             <Grid key={index} item xs={6} md={4} lg={3} sx={{ display: "flex" }}>
               <Image onClick={handleOpen.bind(null, photo.url)} loader={myLoaderSmall} src={photo.thumbnailUrl} alt={photo.title} width={600} height={600} />
             </Grid>
@@ -122,4 +127,4 @@ export async function getStaticProps() {
       photos: photos,
     },
   };
-}
+};
