@@ -5,6 +5,7 @@ import LoadingButton from "@mui/lab/LoadingButton";
 import CommentIcon from "@mui/icons-material/Comment";
 import { useState } from "react";
 
+// TODO: Import types
 interface PostInterface {
   post: {
     id: string;
