@@ -64,7 +64,7 @@ const Vault: NextPage<Props> = ({ photos }) => {
   return (
     <>
       <Head>
-        <title>Feed</title>
+        <title>Vault</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Modal
