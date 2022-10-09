@@ -37,7 +37,7 @@ const style = {
 
 // TODO: combine into single loader
 // Due to time contraints and using JSONplaceholder I used 2 different loaders
-// Also using string.replace is a bit of a hack.. we wouln't need to do this with a proper api
+// Also using string.replace is a bit of a hack.. we wouln't need to do this with a proper API
 const myLoaderSmall = ({ src, width }: Loader) => {
   const imgId = src.replace("https://via.placeholder.com/150/", "");
   const image = `https://via.placeholder.com/${width}/${imgId}`;
