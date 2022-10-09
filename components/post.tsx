@@ -40,6 +40,7 @@ export default function PostSingle({ post }: PostInterface) {
         marginBottom: "16px",
       }}
     >
+      {/* TODO: Improve theming */}
       <Paper style={{ padding: 20 }} sx={{ boxShadow: "rgba(0, 0, 0, 0.08) 1px 1px 9px" }}>
         <Typography variant="h5" component="h3" mt={0} gutterBottom sx={{ textTransform: "capitalize", fontWeight: "700", color: "rgb(36, 37, 41)" }}>
           {post.title}
