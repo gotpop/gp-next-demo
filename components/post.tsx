@@ -1,9 +1,9 @@
-import { Box, Paper, Typography } from "@mui/material";
+import { useState } from "react";
 import useSWR from "swr";
+import { Box, Paper, Typography } from "@mui/material";
 import Comments from "./comments";
 import LoadingButton from "@mui/lab/LoadingButton";
 import CommentIcon from "@mui/icons-material/Comment";
-import { useState } from "react";
 
 // TODO: Import types
 interface PostInterface {
