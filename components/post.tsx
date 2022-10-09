@@ -11,7 +11,7 @@ interface PostInterface {
     title: string;
     body: string;
   };
-}
+};
 
 export default function PostSingle({ post }: PostInterface) {
   const [showComments, setShowComments] = useState(false);
@@ -69,4 +69,4 @@ export default function PostSingle({ post }: PostInterface) {
       </Paper>
     </Box>
   );
-}
+};
