@@ -12,17 +12,17 @@ import Typography from "@mui/material/Typography";
 interface Loader {
   src: string;
   width: number;
-};
+}
 
 interface Props {
   photos: [PhotoInterface];
-};
+}
 
 interface PhotoInterface {
   thumbnailUrl: string;
   title: string;
   url: string;
-};
+}
 
 const style = {
   position: "absolute" as "absolute",
@@ -87,16 +87,7 @@ const Vault: NextPage<Props> = ({ photos }) => {
       </Modal>
       <Container maxWidth="md">
         <Box py={8}>
-          <Typography
-            variant="h2"
-            component="h1"
-            mt={0}
-            gutterBottom
-            sx={{
-              fontWeight: "700",
-              color: "rgb(36, 37, 41)",
-            }}
-          >
+          <Typography variant="h2" component="h1" mt={0} gutterBottom sx={{ fontWeight: "700", color: "rgb(36, 37, 41)" }}>
             Vault
           </Typography>
         </Box>
@@ -127,4 +118,4 @@ export async function getStaticProps() {
       photos: photos,
     },
   };
-};
+}
