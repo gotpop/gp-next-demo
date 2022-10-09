@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import Comment from "./comment";
 
+// TODO: Import types
 interface Props {
   comments: [Comment];
 }
@@ -23,4 +24,4 @@ export default function Comments({ comments }: Props) {
       ))}
     </Box>
   );
-}
+};
