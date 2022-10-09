@@ -9,6 +9,21 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
 
+interface Loader {
+  src: string;
+  width: number;
+};
+
+interface Props {
+  photos: [PhotoInterface];
+};
+
+interface PhotoInterface {
+  thumbnailUrl: string;
+  title: string;
+  url: string;
+};
+
 const style = {
   position: "absolute" as "absolute",
   top: "50%",
@@ -18,11 +33,6 @@ const style = {
   bgcolor: "background.paper",
   boxShadow: 24,
   p: 1,
-};
-
-interface Loader {
-  src: string;
-  width: number;
 };
 
 // TODO: combine into single loader
@@ -40,16 +50,6 @@ const myLoaderLarge = ({ src, width }: Loader) => {
   const image = `https://via.placeholder.com/${width}/${imgId}`;
 
   return image;
-};
-
-interface Props {
-  photos: [PhotoInterface];
-};
-
-interface PhotoInterface {
-  thumbnailUrl: string;
-  title: string;
-  url: string;
 };
 
 const Vault: NextPage<Props> = ({ photos }) => {
