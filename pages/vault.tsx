@@ -8,6 +8,7 @@ import Backdrop from "@mui/material/Backdrop";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
+import NavBar from "../components/menu";
 
 interface Loader {
   src: string;
@@ -85,6 +86,7 @@ const Vault: NextPage<Props> = ({ photos }) => {
           </Box>
         </Fade>
       </Modal>
+      <NavBar />
       <Container maxWidth="md">
         <Box py={8}>
           <Typography variant="h2" component="h1" mt={0} gutterBottom sx={{ fontWeight: "700", color: "rgb(36, 37, 41)" }}>
