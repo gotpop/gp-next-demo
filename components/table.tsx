@@ -1,4 +1,3 @@
-import { DataGrid } from '@mui/x-data-grid'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
