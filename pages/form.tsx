@@ -6,7 +6,7 @@ import { useEffect, useReducer, useState } from 'react'
 import NavBar from '../components/menu'
 import FormResults from '../components/table'
 
-const formInitialState = {
+const formInitialState: FormInterface = {
   firstName: {
     value: '',
     valid: true,
@@ -29,10 +29,10 @@ const formInitialState = {
   }
 }
 
-interface FormInitialState {
+interface FormInterface {
   [key: string]: {
     value: string
-    valid: string
+    valid: boolean
     error: string
   }
 }
@@ -44,7 +44,7 @@ const types = {
   PASSWORD: 'password'
 }
 
-const reducer = (state, action) => {
+const reducer = (state: any, action: FormInterface) => {
   const key = Object.keys(action)[0]
 
   switch (key) {
