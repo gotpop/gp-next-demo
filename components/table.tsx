@@ -8,10 +8,11 @@ import Paper from '@mui/material/Paper'
 
 interface FormData {
   form: {
-    firstName: string
-    lastName: string
-    email: string
-    password: string
+    [key: string]: {
+      value: string
+      valid: string
+      error: string
+    }
   }
 }
 
