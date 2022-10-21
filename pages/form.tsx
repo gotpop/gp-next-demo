@@ -134,7 +134,9 @@ const Form: NextPage = () => {
           </Typography>
           <Box
             component="form"
-            onChange={e => setFormIsValid(e.currentTarget.checkValidity())}
+            onChange={(e: React.ChangeEvent<HTMLFormElement>) =>
+              setFormIsValid(e.currentTarget.checkValidity())
+            }
             onSubmit={onFormSubmit}
             sx={{ '& .MuiFormControl-fullWidth': { mb: 3 } }}>
             <>
