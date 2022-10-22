@@ -3,7 +3,7 @@ import { Box, Button, Container, TextField, Typography } from '@mui/material'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useEffect, useReducer, useState } from 'react'
-import NavBar from '../components/menu'
+import NavBar from '../components/navbar'
 import FormResults from '../components/table'
 
 const formInitialState: FormInterface = {

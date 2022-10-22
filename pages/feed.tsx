@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import PostSingle from '../components/post'
 import { Box, Container } from '@mui/material'
 import Head from 'next/head'
-import NavBar from '../components/menu'
+import NavBar from '@components/navbar'
 
 // TODO: Types could be imported
 interface Props {

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { Box, Button, Container, TextField, Typography } from '@mui/material'
 import Head from 'next/head'
-import NavBar from '../components/menu'
+import NavBar from '../components/navbar'
 import { useEffect, useRef, useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
 
