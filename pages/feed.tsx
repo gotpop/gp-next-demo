@@ -2,7 +2,7 @@ import type { GetStaticProps, NextPage } from 'next'
 import PostSingle from '../components/post'
 import { Box } from '@mui/material'
 import Layout from '@layouts/layout'
-import { IFeedProps, IPost } from '@types/index'
+import { IFeedProps, IPost } from 'types/index'
 
 const Feed: NextPage<IFeedProps> = ({ posts }) => {
   return (

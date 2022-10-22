@@ -9,7 +9,7 @@ import Fade from '@mui/material/Fade'
 import Typography from '@mui/material/Typography'
 import Layout from '@layouts/layout'
 import { myLoaderLarge, myLoaderSmall } from '@utils/loaders'
-import { IPhoto, IPhotoProps } from '@types/index'
+import { IPhoto, IPhotoProps } from 'types/index'
 
 const style = {
   position: 'absolute' as 'absolute',
