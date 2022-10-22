@@ -1,8 +1,7 @@
 import type { NextPage } from 'next'
 import PostSingle from '../components/post'
-import { Box, Container } from '@mui/material'
-import Head from 'next/head'
-import NavBar from '@components/navbar'
+import { Box } from '@mui/material'
+import Layout from '@components/layout'
 
 // TODO: Types could be imported
 interface Props {
@@ -17,21 +16,13 @@ interface PostInterface {
 
 const Feed: NextPage<Props> = ({ posts }) => {
   return (
-    <>
-      <Head>
-        <title>Feed</title>
-        {/* TODO: Call favicon once at a higher level */}
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <NavBar />
-      <Container maxWidth="md">
-        <Box p={8}>
-          {posts.map((post: PostInterface, index: number) => (
-            <PostSingle key={index} post={post} />
-          ))}
-        </Box>
-      </Container>
-    </>
+    <Layout>
+      <Box p={8}>
+        {posts.map((post: PostInterface, index: number) => (
+          <PostSingle key={index} post={post} />
+        ))}
+      </Box>
+    </Layout>
   )
 }
 

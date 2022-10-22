@@ -1,9 +1,8 @@
+import Layout from '@components/layout'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
-import { Box, Button, Container, TextField, Typography } from '@mui/material'
+import { Box, Button, TextField, Typography } from '@mui/material'
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import { useEffect, useReducer, useState } from 'react'
-import NavBar from '../components/navbar'
 import FormResults from '../components/table'
 
 const formInitialState: FormInterface = {
@@ -121,84 +120,77 @@ const Form: NextPage = () => {
   }
 
   return (
-    <>
-      <Head>
-        <title>useReducer</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <NavBar />
-      <Container maxWidth="md">
-        <Box p={8}>
-          <Typography variant="h4" component="h1" mb={2}>
-            useReducer used for form data
-          </Typography>
-          <Box
-            component="form"
-            onChange={(e: React.ChangeEvent<HTMLFormElement>) =>
-              setFormIsValid(e.currentTarget.checkValidity())
-            }
-            onSubmit={onFormSubmit}
-            sx={{ '& .MuiFormControl-fullWidth': { mb: 3 } }}>
-            <>
-              <TextField
-                error={!firstName.valid}
-                name="firstName"
-                value={firstName.value}
-                onChange={reducerInputChange}
-                required
-                fullWidth
-                label="First name"
-                helperText={!firstName.valid ? firstName.error : ''}
-                inputProps={{ minLength: 2 }}
-              />
-              <TextField
-                error={!lastName.valid}
-                fullWidth
-                required
-                label="Last name"
-                name="lastName"
-                value={lastName.value}
-                onChange={reducerInputChange}
-                helperText={!lastName.valid ? lastName.error : ''}
-                inputProps={{ minLength: 2 }}
-              />
-              <TextField
-                error={!email.valid}
-                fullWidth
-                required
-                name="email"
-                value={email.value}
-                onChange={reducerInputChange}
-                label="Email"
-                type="email"
-                helperText={!email.valid ? email.error : ''}
-              />
-              <TextField
-                error={!password.valid}
-                fullWidth
-                required
-                name="password"
-                value={password.value}
-                onChange={reducerInputChange}
-                label="Password"
-                type="password"
-                helperText={!password.valid ? password.error : ''}
-                inputProps={{ minLength: 2 }}
-              />
-              <Button
-                type="submit"
-                variant="contained"
-                size="large"
-                disabled={!formIsValid}
-                endIcon={<ArrowCircleRightOutlinedIcon />}>
-                Register
-              </Button>
-            </>
-          </Box>
-          {showResults && <FormResults form={inputValues} />}
+    <Layout>
+      <Box p={8}>
+        <Typography variant="h4" component="h1" mb={2}>
+          useReducer used for form data
+        </Typography>
+        <Box
+          component="form"
+          onChange={(e: React.ChangeEvent<HTMLFormElement>) =>
+            setFormIsValid(e.currentTarget.checkValidity())
+          }
+          onSubmit={onFormSubmit}
+          sx={{ '& .MuiFormControl-fullWidth': { mb: 3 } }}>
+          <>
+            <TextField
+              error={!firstName.valid}
+              name="firstName"
+              value={firstName.value}
+              onChange={reducerInputChange}
+              required
+              fullWidth
+              label="First name"
+              helperText={!firstName.valid ? firstName.error : ''}
+              inputProps={{ minLength: 2 }}
+            />
+            <TextField
+              error={!lastName.valid}
+              fullWidth
+              required
+              label="Last name"
+              name="lastName"
+              value={lastName.value}
+              onChange={reducerInputChange}
+              helperText={!lastName.valid ? lastName.error : ''}
+              inputProps={{ minLength: 2 }}
+            />
+            <TextField
+              error={!email.valid}
+              fullWidth
+              required
+              name="email"
+              value={email.value}
+              onChange={reducerInputChange}
+              label="Email"
+              type="email"
+              helperText={!email.valid ? email.error : ''}
+            />
+            <TextField
+              error={!password.valid}
+              fullWidth
+              required
+              name="password"
+              value={password.value}
+              onChange={reducerInputChange}
+              label="Password"
+              type="password"
+              helperText={!password.valid ? password.error : ''}
+              inputProps={{ minLength: 2 }}
+            />
+            <Button
+              type="submit"
+              variant="contained"
+              size="large"
+              disabled={!formIsValid}
+              endIcon={<ArrowCircleRightOutlinedIcon />}>
+              Register
+            </Button>
+          </>
         </Box>
-      </Container>
-    </>
+        {showResults && <FormResults form={inputValues} />}
+      </Box>
+    </Layout>
   )
 }
 

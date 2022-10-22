@@ -1,14 +1,13 @@
 import { useState } from 'react'
-import Head from 'next/head'
 import Image from 'next/image'
 import type { NextPage } from 'next'
-import { Container, Box } from '@mui/material'
+import { Box } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import Backdrop from '@mui/material/Backdrop'
 import Modal from '@mui/material/Modal'
 import Fade from '@mui/material/Fade'
 import Typography from '@mui/material/Typography'
-import NavBar from '../components/navbar'
+import Layout from '@components/layout'
 
 interface Loader {
   src: string
@@ -64,10 +63,6 @@ const Vault: NextPage<Props> = ({ photos }) => {
 
   return (
     <>
-      <Head>
-        <title>Vault</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -91,8 +86,7 @@ const Vault: NextPage<Props> = ({ photos }) => {
           </Box>
         </Fade>
       </Modal>
-      <NavBar />
-      <Container maxWidth="md">
+      <Layout>
         <Box py={8}>
           <Typography
             variant="h2"
@@ -125,7 +119,7 @@ const Vault: NextPage<Props> = ({ photos }) => {
             </Grid>
           ))}
         </Grid>
-      </Container>
+      </Layout>
     </>
   )
 }

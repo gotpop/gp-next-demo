@@ -1,9 +1,8 @@
 import type { NextPage } from 'next'
 import { Box, Button, Container, TextField, Typography } from '@mui/material'
-import Head from 'next/head'
-import NavBar from '../components/navbar'
 import { useEffect, useRef, useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
+import Layout from '@components/layout'
 
 // TODO: Types could be imported
 interface Props {
@@ -30,36 +29,29 @@ const Render: NextPage<Props> = ({ posts }) => {
   }
 
   return (
-    <>
-      <Head>
-        <title>Feed</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <NavBar />
-      <Container maxWidth="md">
-        <Box p={8}>
-          <Typography variant="h2" component="h1" mb={2}>
-            Component render count
-          </Typography>
-          <TextField
-            inputRef={inputRef}
-            fullWidth
-            label={name}
-            variant="outlined"
-            onChange={e => setName(e.target.value)}
-          />
-          <Typography variant="h4" component="p" mb={2} mt={2}>
-            This component has rendered {renderCount.current} times
-          </Typography>
-          <Button
-            variant="contained"
-            onClick={() => focus()}
-            endIcon={<MenuIcon />}>
-            Focus
-          </Button>
-        </Box>
-      </Container>
-    </>
+    <Layout>
+      <Box p={8}>
+        <Typography variant="h2" component="h1" mb={2}>
+          Component render count
+        </Typography>
+        <TextField
+          inputRef={inputRef}
+          fullWidth
+          label={name}
+          variant="outlined"
+          onChange={e => setName(e.target.value)}
+        />
+        <Typography variant="h4" component="p" mb={2} mt={2}>
+          This component has rendered {renderCount.current} times
+        </Typography>
+        <Button
+          variant="contained"
+          onClick={() => focus()}
+          endIcon={<MenuIcon />}>
+          Focus
+        </Button>
+      </Box>
+    </Layout>
   )
 }
 
