@@ -103,10 +103,6 @@ const Form: NextPage = () => {
     })
   }
 
-  useEffect(() => {
-    console.log('inputValues :', inputValues)
-  }, [inputValues])
-
   const onFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setShowResults(true)
