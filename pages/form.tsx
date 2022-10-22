@@ -1,4 +1,4 @@
-import Layout from '@components/layout'
+import Layout from '@layouts/layout'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
 import { Box, Button, TextField, Typography } from '@mui/material'
 import type { NextPage } from 'next'

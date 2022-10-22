@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import { Box, Button, Container, TextField, Typography } from '@mui/material'
 import { useEffect, useRef, useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
-import Layout from '@components/layout'
+import Layout from '@layouts/layout'
 
 // TODO: Types could be imported
 interface Props {

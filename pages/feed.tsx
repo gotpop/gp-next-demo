@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import PostSingle from '../components/post'
 import { Box } from '@mui/material'
-import Layout from '@components/layout'
+import Layout from '@layouts/layout'
 
 // TODO: Types could be imported
 interface Props {
@@ -28,9 +28,7 @@ const Feed: NextPage<Props> = ({ posts }) => {
 
 export default Feed
 
-// I use get static props here to take advantage of SSR
-// Elsewhere I use SWR to call the comments which would be more likley to require realtime updates
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async context => {
   const url = 'https://jsonplaceholder.typicode.com/posts'
 
   const res = await fetch(url)

@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import { Box, Typography, CardContent } from '@mui/material'
 import BasicCard from '../components/card'
 import Card from '@mui/material/Card'
-import Layout from '@components/layout'
+import Layout from '@layouts/layout'
 
 const pages = [
   { name: 'Feed', href: '/feed' },

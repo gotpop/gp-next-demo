@@ -7,7 +7,7 @@ import Backdrop from '@mui/material/Backdrop'
 import Modal from '@mui/material/Modal'
 import Fade from '@mui/material/Fade'
 import Typography from '@mui/material/Typography'
-import Layout from '@components/layout'
+import Layout from '@layouts/layout'
 
 interface Loader {
   src: string

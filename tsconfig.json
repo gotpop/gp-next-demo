@@ -16,8 +16,10 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@lib/*": ["./lib/*"],
+      "@content/*": ["./content/*"],
+      "@layouts/*": ["./layouts/*"],
       "@utils/*": ["./utils/*"],
+      "@types/*": ["./types/*"],
       "@components/*": ["./components/*"]
     }
   },
