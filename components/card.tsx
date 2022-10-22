@@ -15,7 +15,7 @@ const bull = (
   </Box>
 )
 
-export default function BasicCard({ page }) {
+export default function BasicCard({ page }: any) {
   const { name, href } = page
 
   return (
