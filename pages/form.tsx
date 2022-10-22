@@ -1,10 +1,10 @@
 import Layout from '@layouts/layout'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
 import { Box, Button, TextField, Typography } from '@mui/material'
-import { IForm } from '@types/index'
+import { IForm } from 'types/index'
 import type { NextPage } from 'next'
 import { useEffect, useReducer, useState } from 'react'
-import FormResults from '../components/table'
+import FormResults from '@components/table'
 
 const formInitialState: IForm = {
   firstName: {

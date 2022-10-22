@@ -10,24 +10,14 @@ import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
 import AdbIcon from '@mui/icons-material/Adb'
-
-const pages = [
-  { name: 'Feed', href: '/feed' },
-  { name: 'Render', href: '/render' },
-  { name: 'Form', href: '/form' },
-  { name: 'Vault', href: '/vault' }
-]
+import { pages } from '@content/pages'
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget)
-  }
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null)
-  }
+  const handleCloseNavMenu = () => setAnchorElNav(null)
+  const handleOpenNavMenu = (e: React.MouseEvent<HTMLElement>) =>
+    setAnchorElNav(e.currentTarget)
 
   return (
     <AppBar position="static">
