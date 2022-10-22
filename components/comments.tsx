@@ -1,27 +1,15 @@
-import { Box } from "@mui/material";
-import Comment from "./comment";
+import { Box, Typography } from '@mui/material'
+import { IComment, ICommentsProps } from 'types/index'
+import Comment from './comment'
 
-// TODO: Import types
-interface Props {
-  comments: [Comment];
-}
-
-interface Comment {
-  name: string;
-  email: string;
-  body: string;
-}
-
-export default function Comments({ comments }: Props) {
-  if (!comments) return (
-    <><p>Loading...</p></>
-  );
+export default function Comments({ comments }: ICommentsProps) {
+  if (!comments) return <Typography component="p">Loading...</Typography>
 
   return (
     <Box mt={4}>
-      {comments.map((comment: Comment, index) => (
+      {comments.map((comment: IComment, index: number) => (
         <Comment key={index} comment={comment} />
       ))}
     </Box>
-  );
-};
+  )
+}

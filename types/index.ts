@@ -1,32 +1,46 @@
 export interface IFeedProps {
-    posts: IPost[]
+    posts: IPost[];
 }
 
 export interface IPost {
-    id: string
-    title: string
-    body: string
+    id: string;
+    title: string;
+    body: string;
 }
 
 export interface IForm {
     [key: string]: {
-        value: string
-        valid: boolean
-        error: string
+        value: string;
+        valid: boolean;
+        error: string;
     }
 }
 
 export interface ILoader {
-    src: string
-    width: number
+    src: string;
+    width: number;
 }
 
 export interface IPhotoProps {
-    photos: IPhoto[]
+    photos: IPhoto[];
 }
 
 export interface IPhoto {
-    thumbnailUrl: string
-    title: string
-    url: string
+    thumbnailUrl: string;
+    title: string;
+    url: string;
+}
+
+export interface ICommentProps {
+    comment: IComment;
+}
+
+export interface ICommentsProps {
+    comments: IComment[];
+}
+
+export interface IComment {
+    name: string;
+    email: string;
+    body: string;
 }

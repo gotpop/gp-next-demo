@@ -1,22 +1,12 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from '@mui/material'
+import { ICommentProps } from 'types/index'
 
-// TODO: Import types
-interface Comment {
-  comment: {
-    name: string;
-    email: string;
-    body: string;
-  };
-};
-
-export default function Comment({ comment }: Comment) {
+export default function Comment({ comment }: ICommentProps) {
   return (
-    // TODO: Improve theming use vars etc..
-    // Use MUI typography
-    <Box mb={4} p={2} sx={{ background: "#f9f9f9", borderRadius: "16px" }}>
-      <h3>{comment.name}</h3>
-      <p>{comment.email}</p>
-      <p>{comment.body}</p>
+    <Box mb={4} p={2} sx={{ background: '#f9f9f9', borderRadius: '16px' }}>
+      <Typography component="h3">{comment.name}</Typography>
+      <Typography component="p">{comment.email}</Typography>
+      <Typography component="p">{comment.body}</Typography>
     </Box>
-  );
-};
+  )
+}
