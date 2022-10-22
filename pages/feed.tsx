@@ -2,23 +2,13 @@ import type { GetStaticProps, NextPage } from 'next'
 import PostSingle from '../components/post'
 import { Box } from '@mui/material'
 import Layout from '@layouts/layout'
+import { IFeedProps, IPost } from '@types/index'
 
-// TODO: Types could be imported
-interface Props {
-  posts: PostInterface[]
-}
-
-interface PostInterface {
-  id: string
-  title: string
-  body: string
-}
-
-const Feed: NextPage<Props> = ({ posts }) => {
+const Feed: NextPage<IFeedProps> = ({ posts }) => {
   return (
     <Layout>
       <Box p={8}>
-        {posts.map((post: PostInterface, index: number) => (
+        {posts.map((post: IPost, index: number) => (
           <PostSingle key={index} post={post} />
         ))}
       </Box>

@@ -8,21 +8,8 @@ import Modal from '@mui/material/Modal'
 import Fade from '@mui/material/Fade'
 import Typography from '@mui/material/Typography'
 import Layout from '@layouts/layout'
-
-interface Loader {
-  src: string
-  width: number
-}
-
-interface Props {
-  photos: [PhotoInterface]
-}
-
-interface PhotoInterface {
-  thumbnailUrl: string
-  title: string
-  url: string
-}
+import { myLoaderLarge, myLoaderSmall } from '@utils/loaders'
+import { IPhoto, IPhotoProps } from '@types/index'
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -35,24 +22,7 @@ const style = {
   p: 1
 }
 
-// TODO: combine into single loader
-// Due to time contraints and using JSONplaceholder I used 2 different loaders
-// Also using string.replace is a bit of a hack.. we wouln't need to do this with a proper API
-const myLoaderSmall = ({ src, width }: Loader) => {
-  const imgId = src.replace('https://via.placeholder.com/150/', '')
-  const image = `https://via.placeholder.com/${width}/${imgId}`
-
-  return image
-}
-
-const myLoaderLarge = ({ src, width }: Loader) => {
-  const imgId = src.replace('https://via.placeholder.com/600/', '')
-  const image = `https://via.placeholder.com/${width}/${imgId}`
-
-  return image
-}
-
-const Vault: NextPage<Props> = ({ photos }) => {
+const Vault: NextPage<IPhotoProps> = ({ photos }) => {
   const [open, setOpen] = useState(false)
   const [url, setUrl] = useState('')
   const handleClose = () => setOpen(false)
@@ -98,9 +68,7 @@ const Vault: NextPage<Props> = ({ photos }) => {
           </Typography>
         </Box>
         <Grid container>
-          {photos.slice(0, 30).map((photo: PhotoInterface, index: number) => (
-            // Whilst this is responsive it only uses 2 image sizes, which works well enough for the purposes of this demo
-            // But would be more sophisticated in a polished product
+          {photos.slice(0, 30).map((photo: IPhoto, index: number) => (
             <Grid
               key={index}
               item

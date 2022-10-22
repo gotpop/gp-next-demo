@@ -1,11 +1,12 @@
 import Layout from '@layouts/layout'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
 import { Box, Button, TextField, Typography } from '@mui/material'
+import { IForm } from '@types/index'
 import type { NextPage } from 'next'
 import { useEffect, useReducer, useState } from 'react'
 import FormResults from '../components/table'
 
-const formInitialState: FormInterface = {
+const formInitialState: IForm = {
   firstName: {
     value: '',
     valid: true,
@@ -28,14 +29,6 @@ const formInitialState: FormInterface = {
   }
 }
 
-interface FormInterface {
-  [key: string]: {
-    value: string
-    valid: boolean
-    error: string
-  }
-}
-
 const types = {
   FIRSTNAME: 'firstName',
   LASTNAME: 'lastName',
@@ -43,7 +36,7 @@ const types = {
   PASSWORD: 'password'
 }
 
-const reducer = (state: any, action: FormInterface) => {
+const reducer = (state: any, action: IForm) => {
   const key = Object.keys(action)[0]
 
   switch (key) {

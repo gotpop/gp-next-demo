@@ -3,13 +3,7 @@ import { Box, Typography, CardContent } from '@mui/material'
 import BasicCard from '../components/card'
 import Card from '@mui/material/Card'
 import Layout from '@layouts/layout'
-
-const pages = [
-  { name: 'Feed', href: '/feed' },
-  { name: 'Render', href: '/render' },
-  { name: 'Form', href: '/form' },
-  { name: 'Vault', href: '/vault' }
-]
+import { pages } from '@content/pages'
 
 const Home: NextPage = () => {
   return (
