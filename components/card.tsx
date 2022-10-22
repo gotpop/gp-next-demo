@@ -11,22 +11,15 @@ export default function BasicCard({ page }: any) {
 
   return (
     <Box mb={4}>
-      <Card sx={{ minWidth: 275 }}>
+      <Card>
         <CardContent>
-          <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+          <Typography component="h3" color="text.secondary" gutterBottom>
             {name}
           </Typography>
-          <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            adjective
-          </Typography>
-          <Typography variant="body2">
-            well meaning and kindly.
-            <br />
-            {'"a benevolent smile"'}
-          </Typography>
+          <Typography variant="body2">Well meaning and kindly.</Typography>
         </CardContent>
         <CardActions>
-          <Link href={href}>Link</Link>
+          <Link href={href}>View</Link>
         </CardActions>
       </Card>
     </Box>
