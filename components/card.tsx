@@ -5,8 +5,9 @@ import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 import Link from 'next/link'
+import { IPageProps } from 'types/index'
 
-export default function BasicCard({ page }: any) {
+export default function BasicCard({ page }: IPageProps) {
   const { name, href } = page
 
   return (

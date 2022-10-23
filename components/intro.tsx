@@ -7,14 +7,7 @@ export default function Intro({ content }: any) {
   return (
     <Card>
       <CardContent>
-        <Typography
-          variant="h2"
-          component="h1"
-          sx={{
-            fontFamily: 'monospace',
-            fontWeight: 700,
-            letterSpacing: '.3rem'
-          }}>
+        <Typography variant="h2" component="h1">
           NextJS Demo
         </Typography>
         <Typography component="p">

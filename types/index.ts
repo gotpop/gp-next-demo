@@ -8,6 +8,10 @@ export interface IPost {
     body: string;
 }
 
+export interface IPostProps {
+    post: IPost;
+}
+
 export interface IForm {
     [key: string]: {
         value: string;
@@ -43,4 +47,17 @@ export interface IComment {
     name: string;
     email: string;
     body: string;
+}
+
+export interface IPageProps {
+    page: IPage;
+}
+
+export interface IPagesProps {
+    pages: IPage[];
+}
+
+export interface IPage {
+    name: string;
+    href: string;
 }
