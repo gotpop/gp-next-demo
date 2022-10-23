@@ -1,4 +1,4 @@
-# NextJS Demo
+# NextJS Democ ⏭️
 
 A demonstration of various different use cases and approaches.
 
