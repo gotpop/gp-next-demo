@@ -61,3 +61,8 @@ export interface IPage {
     name: string;
     href: string;
 }
+
+export interface IIntro {
+    title: string;
+    text: string;
+}

@@ -14,7 +14,7 @@ export default function BasicCard({ page }: IPageProps) {
     <Box mb={4}>
       <Card>
         <CardContent>
-          <Typography component="h3" color="text.secondary" gutterBottom>
+          <Typography component="h2" gutterBottom>
             {name}
           </Typography>
           <Typography variant="body2">Well meaning and kindly.</Typography>
