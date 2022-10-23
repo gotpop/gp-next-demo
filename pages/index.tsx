@@ -6,7 +6,6 @@ import { pages } from '@content/pages'
 import Intro from '@components/intro'
 import Grid from '@mui/material/Unstable_Grid2'
 import { introContent } from '@content/intro'
-introContent
 
 const Home: NextPage = () => {
   return (
