@@ -15,6 +15,6 @@ https://gp-next-demo.vercel.app
 
 ## Tech stack:
 
-- NextJs
+- Next.JS
 - MUI5
 - TypeScript
