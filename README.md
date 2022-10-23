@@ -8,6 +8,8 @@ https://gp-next-demo.vercel.app
 
 ![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=gp-next-demo-teamgotpop)
 
+https://vercel.com
+
 ## Demos:
 
 - A feed demo, displaying a list of posts and their comments.
