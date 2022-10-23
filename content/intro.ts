@@ -1,4 +1,4 @@
 export const introContent = {
     title: 'NextJS Demo',
-    text: 'A demonstation of various different use cases and approaches.'
+    text: 'A demonstration of various different use cases and approaches.'
 }
