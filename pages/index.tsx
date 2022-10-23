@@ -11,9 +11,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Box m={4}>
-        <Box mb={4}>
-          <Intro content={introContent} />
-        </Box>
+        <Intro content={introContent} />
         <Grid container spacing={2}>
           {pages.map(page => (
             <Grid key={page.name} xs={12} md={6}>
