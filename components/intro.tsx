@@ -7,8 +7,8 @@ export default function Intro({ content }: IIntroProps) {
   const { title, text } = content
 
   return (
-    <Box mb={4}>
-      <Typography variant="h3" component="h1">
+    <Box mt={6} mb={4}>
+      <Typography variant="h3" component="h1" gutterBottom>
         {title}
       </Typography>
       <Typography component="p">{text}</Typography>

@@ -2,6 +2,18 @@ import { createTheme } from "@mui/material/styles";
 import { purple } from '@mui/material/colors';
 
 const lightTheme = createTheme({
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          minHeight: '100vh'
+        },
+        main: {
+          minHeight: '80vh'
+        },
+      }
+    }
+  },
   shape: {
     borderRadius: 16,
   },
