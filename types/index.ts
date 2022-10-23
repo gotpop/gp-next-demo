@@ -60,6 +60,7 @@ export interface IPagesProps {
 export interface IPage {
     name: string;
     href: string;
+    description: string;
 }
 
 export interface IIntroProps {

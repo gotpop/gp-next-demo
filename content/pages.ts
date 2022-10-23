@@ -1,6 +1,6 @@
 export const pages = [
-    { name: 'Feed', href: '/feed' },
-    { name: 'Render', href: '/render' },
-    { name: 'Form', href: '/form' },
-    { name: 'Vault', href: '/vault' }
+    { name: 'Feed', href: '/feed', description: 'A feed demo, displaying a list of posts and their comments.' },
+    { name: 'Render', href: '/render', description: 'A render count demo, useful for debugging.' },
+    { name: 'Form', href: '/form', description: 'A form demop using useReducer to handle complex state' },
+    { name: 'Vault', href: '/vault', description: 'An image gallery demo, using JSONPlaceholder.' }
 ]
