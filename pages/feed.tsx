@@ -7,7 +7,7 @@ import { IFeedProps, IPost } from 'types/index'
 const Feed: NextPage<IFeedProps> = ({ posts }) => {
   return (
     <Layout>
-      <Box p={8}>
+      <Box mt={8}>
         {posts.map((post: IPost, index: number) => (
           <PostSingle key={index} post={post} />
         ))}

@@ -1,12 +1,19 @@
-import { Box, Typography } from '@mui/material'
+import { Paper, Typography } from '@mui/material'
 import { ICommentProps } from 'types/index'
+import { grey } from '@mui/material/colors'
 
 export default function Comment({ comment }: ICommentProps) {
   return (
-    <Box mb={4} p={2} sx={{ background: '#f9f9f9', borderRadius: '16px' }}>
-      <Typography component="h3">{comment.name}</Typography>
-      <Typography component="p">{comment.email}</Typography>
-      <Typography component="p">{comment.body}</Typography>
-    </Box>
+    <Paper elevation={0} variant="outlined" sx={{ p: 2, mb: 2 }}>
+      <Typography component="h3" variant="h5" gutterBottom>
+        {comment.name}
+      </Typography>
+      <Typography component="p" gutterBottom>
+        {comment.email}
+      </Typography>
+      <Typography component="p" color={grey[600]}>
+        {comment.body}
+      </Typography>
+    </Paper>
   )
 }
