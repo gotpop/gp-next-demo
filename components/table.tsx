@@ -5,18 +5,9 @@ import TableContainer from '@mui/material/TableContainer'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
+import { IFormProps } from 'types/index'
 
-interface FormData {
-  form: {
-    [key: string]: {
-      value: string
-      valid: string
-      error: string
-    }
-  }
-}
-
-export default function FormResults({ form }: FormData) {
+export default function FormResults({ form }: IFormProps) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
