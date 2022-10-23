@@ -11,6 +11,8 @@ import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
 import AdbIcon from '@mui/icons-material/Adb'
 import { pages } from '@content/pages'
+import NextLink from 'next/link'
+import { Link } from '@mui/material'
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
@@ -107,6 +109,11 @@ const NavBar = () => {
               </Button>
             ))}
           </Box>
+          <NextLink href="https://github.com/gotpop/gp-next-demo" passHref>
+            <Link variant="button" color="inherit">
+              View Github
+            </Link>
+          </NextLink>
         </Toolbar>
       </Container>
     </AppBar>
