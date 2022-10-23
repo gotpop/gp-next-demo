@@ -62,6 +62,10 @@ export interface IPage {
     href: string;
 }
 
+export interface IIntroProps {
+    content: IIntro;
+}
+
 export interface IIntro {
     title: string;
     text: string;
