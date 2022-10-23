@@ -14,13 +14,13 @@ export default function Layout(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <NavBar {...props} />
+        <NavBar />
         <main>
           <Container maxWidth="md">
             {children}
           </Container>
         </main>
-        <Footer {...props} />
+        <Footer />
       </div>
     </>
   );
