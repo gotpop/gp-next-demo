@@ -6,6 +6,8 @@ A demonstration of various different use cases and approaches.
 
 https://gp-next-demo.vercel.app
 
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=gp-next-demo-teamgotpop)
+
 ## Demos:
 
 - A feed demo, displaying a list of posts and their comments.
@@ -18,3 +20,5 @@ https://gp-next-demo.vercel.app
 - Next.JS
 - MUI5
 - TypeScript
+
+![Next.JS](https://gp-next-demo.vercel.app/nextjs.jpeg)
