@@ -12,6 +12,10 @@ export interface IPostProps {
     post: IPost;
 }
 
+export interface IFormProps {
+    form: IForm;
+}
+
 export interface IForm {
     [key: string]: {
         value: string;
